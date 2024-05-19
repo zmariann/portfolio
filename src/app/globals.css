@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: regonia;
+  src: url("/regonia.otf");
+}
+
+@font-face {
+  font-family: effraMD;
+  src: url("/Effra_Trial_Md.ttf");
+}
+
+@font-face {
+  font-family: effraXBD;
+  src: url("/Effra_Trial_XBd.ttf");
+}
+
+/*
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,13 +31,106 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+*/
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f0f0f0;
+}
+
+* {
+  font-family: effraMD;
+  font-size: 20px;
+  color: #323232;
+}
+
+.display-linebreak {
+  white-space: pre-line;
+}
+
+.effraBold {
+  font-family: effraXBD;
+}
+
+.title {
+  font-family: regonia;
+  font-size: 60px;
+  letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-family: regonia;
+    font-size: 9vw;
+    letter-spacing: 5px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .title {
+    font-family: regonia;
+    font-size: 12vw;
+    letter-spacing: 5px;
+  }
+}
+
+.mainPageIMG {
+  background-image: url(/weblap.jpg);
+}
+
+.about {
+  font-family: regonia;
+  font-size: 70px;
+  letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .about {
+    font-family: regonia;
+    font-size: 15vw;
+    letter-spacing: 5px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about {
+    font-family: regonia;
+    font-size: 20vw;
+    letter-spacing: 5px;
+  }
+}
+
+.projects {
+  font-family: regonia;
+  font-size: 70px;
+  letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects {
+    font-family: regonia;
+    font-size: 15vw;
+    letter-spacing: 5px;
+  }
+}
+
+.horizontalGal {
+  font-family: regonia;
+  font-size: 70px;
+  letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .horizontalGal {
+    font-family: regonia;
+    font-size: 15vw;
+    letter-spacing: 5px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .horizontalGal {
+    font-family: regonia;
+    font-size: 12vw;
+    letter-spacing: 5px;
+  }
 }
