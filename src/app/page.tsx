@@ -68,12 +68,12 @@ export default function Page() {
       <div className="md:flex hidden">
         <img
           className="md:w-[50%] w-[90%] h-auto"
-          src="weblap.jpg"
+          src="_MG_0912.jpg"
           alt="skydive"
         />
         <img
           className="md:w-[50%] w-[90%] h-auto"
-          src="weblap.jpg"
+          src="_MG_0983.jpg"
           alt="skydive"
         />
       </div>
@@ -87,28 +87,31 @@ export default function Page() {
 
       <div className="border-t-[3px] border-mainBlack">
         <div className="hidden md:flex ml-5">
-          <div className="mt-5 mb-3 ml-5 mr-4">LINKEDIN</div>
-          <div className="mt-5 mb-3 ml-5 mr-4">GITHUB</div>
+          <a className="mt-5 mb-3 ml-5 mr-4" target="_blank" href="https://www.linkedin.com/in/zmariann/" >LINKEDIN
+          </a>
+          <a className="mt-5 mb-3 ml-5 mr-4" target="_blank" href="https://github.com/zmariann" >GITHUB
+          </a>
         </div>
 
         <div className="flex md:hidden px-4 pb-3 pt-2 gap-4">
           <a
             href="https://www.linkedin.com/in/zmariann/"
             target="_blank"
-            rel="noreferrer"
+            rel="linkedin"
           >
             <img src="linkedin.png" alt="github" />
           </a>
-          <img src="github.png" alt="linkedin" />
+
+          <a
+            href="https://github.com/zmariann"
+            target="_blank"
+            rel="github"
+          >
+            <img src="github.png" alt="linkedin" />
+          </a>
+
         </div>
       </div>
     </div>
   );
 }
-
-
-// TYPESCRIPT REACT NEXT.JS TAILWIND GIT NODE.JS PHOTOSHOP LIGTHROOM
-// PREMIER PRO CONTENT AUDIOVISUAL CODING CREATING WORLDS*
-// unusual solutions yes, I consider coding a creative activity.
-// I'm enjoying to use these fantastic tools and I'm highly willing to learn something new time by time.
-// different tools how work together
