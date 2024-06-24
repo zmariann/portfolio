@@ -1,14 +1,14 @@
-import { images } from "../pigments/_components/imgpigments";
+import { images } from "../mixed/_components/imgmixed";
 import Horizontal from "../_components/horizontalGallery";
 
 export default function Pigments() {
   return (
     <div>
       <Horizontal
-        title="PIGMENTS"
+        title="PRODUCTS"
         description=""
         images={images}
-        alt="pigments"
+        alt="products"
       />
     </div>
   );

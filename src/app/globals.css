@@ -2,43 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+.impWOuter {
+  @apply leading-[10vw] flex flex-col
+}
+
+.impWInner {
+  @apply boldText text-[10vw] md:text-8xl hover:bg-[#e1cb9c] cursor-pointer
+}
+
+.transitionAnim {
+  @apply transition-opacity duration-[1300ms] opacity-0
+}
+
+.outerImpWordsStlye {
+  display: flex;
+  line-height: 10vw;
+  line-height: 6vh;
+  flex-direction: column;
+}
+
+.importantWordsStyle {
+  font-family: regradeBold;
+  font-size: 10vw;
+  font-size: 6vh;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .importantWordsStyle {
+    font-size: 6px;
+  }
+}
+
+.importantWordsStyle:hover {
+  background-color: yellow;
+}
+
 @font-face {
   font-family: regonia;
   src: url("/regonia.otf");
 }
 
 @font-face {
-  font-family: effraMD;
-  src: url("/Effra_Trial_Md.ttf");
+  font-family: regrade;
+  src: url("/neue_regrade.ttf");
+  font-weight:500;
 }
 
 @font-face {
-  font-family: effraXBD;
-  src: url("/Effra_Trial_XBd.ttf");
+  font-family: regradeBold;
+  src: url("/neue_regrade.ttf");
+  font-weight:900;
 }
-
-/*
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-*/
 
 body {
   background-color: #f0f0f0;
 }
 
 * {
-  font-family: effraMD;
+  font-family: regrade;
   font-size: 20px;
   color: #323232;
 }
@@ -47,8 +69,8 @@ body {
   white-space: pre-line;
 }
 
-.effraBold {
-  font-family: effraXBD;
+.boldText {
+  font-family: regradeBold;
 }
 
 .title {
@@ -133,4 +155,21 @@ body {
     font-size: 12vw;
     letter-spacing: 5px;
   }
+}
+
+body:has(.requires-no-scroll) {
+  overflow: hidden;
+}
+
+[hidden]{
+  display:none;
+  opacity: 0;
+}
+
+.flexbox{
+  display: flex;
+}
+
+.visible {
+  opacity: 1;
 }

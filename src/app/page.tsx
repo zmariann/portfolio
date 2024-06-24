@@ -1,37 +1,22 @@
+"use client";
 import Link from "next/link";
-
-const importantWords = [
-  {
-    word: "MULTIMEDIA CONTENT ",
-    href: "/about",
-  },
-  {
-    word: "PHOTOGRAPHY ",
-    href: "/keyWords/photo",
-  },
-  {
-    word: "CODING STUFF",
-    href: "/projects",
-  },
-  {
-    word: "CREATING WORLDS ",
-    href: "/contact",
-  },
-  {
-    word: "ADOBE SOFTWARES ",
-    href: "/contact",
-  },
-  {
-    word: "PERSONALISED DESIGN*",
-    href: "/contact",
-  },
-];
+import Multimedia from "./_components/importantWords/multimedia";
+import Photo from "./_components/importantWords/photo";
+import Code from "./_components/importantWords/code";
+import Creating from "./_components/importantWords/creating";
+import Adobe from "./_components/importantWords/adobe";
+import Personalised from "./_components/importantWords/personalised";
+import { useEffect } from "react";
+import { transitionAnim } from "./_components/transitionAnimEffect";
 
 export default function Page() {
+  useEffect(() => {
+    transitionAnim();
+  }, []);
   return (
     <div>
-      <div className="flex justify-center items-center flex-col">
-        <div className="md:pl-[0px] md:pr-[0px] mt-[25%] md:mt-[15%] mb-[10%] md:mb-[15%] ml-2">
+      <div className="hidden transitionAnim flexbox justify-center items-center flex-col">
+        <div className="md:pl-[0px] md:pr-[0px] mt-[25%] md:mt-[15%] mb-[10%] md:mb-[15%]">
           <div className="title">PORTFOLIO</div>
 
           <div className="display-linebreak">
@@ -45,40 +30,33 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="leading-[10vw] md:leading-[14vh] leading-[12vh] flex flex-col">
-        {importantWords.map((d, i) => (
-          <Link className="effraBold text-[10vw] text-[15vh] md:text-8xl hover:bg-[#e1cb9c]" key={i} href={d.href}>
-            {d.word}
-          </Link>
-        ))}
-      </div>
+      <Multimedia></Multimedia>
+      <Photo></Photo>
+      <Code></Code>
+      <Creating></Creating>
+      <Adobe></Adobe>
+      <Personalised></Personalised>
 
-      <div className="">
-        *CLICK ON THESE WORDS TO GET THE DETAILS
-      </div>
+      <div className="">*CLICK ON THESE WORDS TO GET THE DETAILS</div>
 
       <div className="md:hidden">
-        <img
-          className="w-full h-auto"
-          src="weblap.jpg"
-          alt="skydive"
-        />
+        <img className="w-full h-auto" src="weblap.jpg" alt="indexPageMobile" />
       </div>
 
-      <div className="md:flex hidden">
+      <div className="md:flex hidden transitionAnim">
         <img
           className="md:w-[50%] w-[90%] h-auto"
           src="_MG_0912.jpg"
-          alt="skydive"
+          alt="indexPage01"
         />
         <img
           className="md:w-[50%] w-[90%] h-auto"
           src="_MG_0983.jpg"
-          alt="skydive"
+          alt="indexPage02"
         />
       </div>
 
-      <div className="flex justify-center items-center my-[5%]">
+      <div className="hidden transitionAnim flexbox justify-center items-center my-[5%]">
         <div className="text-sm md:text-base">
           <p>MARIANN ZÁSZLÓS</p>
           <p>INFO@ZMARIANN.COM</p>
@@ -87,13 +65,26 @@ export default function Page() {
 
       <div className="border-t-[3px] border-mainBlack">
         <div className="hidden md:flex ml-5">
-          <a className="mt-5 mb-3 ml-5 mr-4" target="_blank" href="https://www.linkedin.com/in/zmariann/" >LINKEDIN
+          
+          <a
+            className="mt-5 mb-3 ml-5 mr-4"
+            target="_blank"
+            href="https://www.linkedin.com/in/zmariann/"
+          >
+            LINKEDIN
           </a>
-          <a className="mt-5 mb-3 ml-5 mr-4" target="_blank" href="https://github.com/zmariann" >GITHUB
+          <a
+            className="mt-5 mb-3 ml-5 mr-4"
+            target="_blank"
+            href="https://github.com/zmariann"
+          >
+            GITHUB 
           </a>
+           <div className="mt-5 mb-3 ml-5 mr-4">© ZAMARKA 2024</div>
+          
         </div>
 
-        <div className="flex md:hidden px-4 pb-3 pt-2 gap-4">
+        <div className="flexbox md:hidden px-4 pb-3 pt-2 gap-4">
           <a
             href="https://www.linkedin.com/in/zmariann/"
             target="_blank"
@@ -102,14 +93,9 @@ export default function Page() {
             <img src="linkedin.png" alt="github" />
           </a>
 
-          <a
-            href="https://github.com/zmariann"
-            target="_blank"
-            rel="github"
-          >
+          <a href="https://github.com/zmariann" target="_blank" rel="github">
             <img src="github.png" alt="linkedin" />
           </a>
-
         </div>
       </div>
     </div>

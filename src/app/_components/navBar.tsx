@@ -36,21 +36,21 @@ export default function NavBar() {
   return (
     <div className="flex border-b-[3px] border-mainBlack bg-background fixed w-full justify-end md:justify-between md:pt-6 md:pb-4 md:px-8">
       <div className="hidden md:flex">
-        <Link className="" href="/">
+        <Link href="/">
           ///
         </Link>
       </div>
 
       <div className="hidden md:flex gap-6">
         {navLinks.map((d, i) => (
-          <Link key={i} href={d.href}>
+          <Link className="" key={i} href={d.href}>
             {d.label}
           </Link>
         ))}
       </div>
 
       {showMenu && (
-        <div className="fixed inset-x-0 top-12 mx-8 flex flex-col items-center border-[3px] border-mainBlack bg-background md:hidden">
+        <div className="fixed w-full h-screen flex flex-col items-center border-[3px] border-mainBlack bg-background md:hidden requires-no-scroll">
           <section className="my-4 flex flex-col items-center gap-1">
             <Link className="" href="/">
               HOME
