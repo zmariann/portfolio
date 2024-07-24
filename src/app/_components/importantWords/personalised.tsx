@@ -9,7 +9,7 @@ export default function Personalised() {
   return (
     <div className="impWOuter">
       <div className="impWInner" onClick={() => setPersonalisedPopup(true)}>
-      PERSONALISED DESIGN
+      personalised
       </div>
       <Popup trigger={personalisedPopup} setTrigger={setPersonalisedPopup}>
         <div>Personalised contentke!!!</div>

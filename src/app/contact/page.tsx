@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
 
-    <div className="flex justify-center items-center h-screen">
+    <footer className="flex justify-center items-center h-screen">
       <div className="">
         <div className="text-2xl boldText">CONTACT</div>
         <div className="display-linebreak">
@@ -17,7 +17,7 @@ export default function Contact() {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
 
   );
 }

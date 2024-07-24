@@ -7,7 +7,7 @@ export default function Code() {
   const [codePopup, setCodePopup] = useState(false);
 
   return (
-    <div className="impWOuter">
+    <div className="impWOuter hidden transitionAnim">
       <div className="impWInner" onClick={() => setCodePopup(true)}>
       CODING STUFF
       </div>

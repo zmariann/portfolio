@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="flex justify-center">
-      <div className="ml-2 md:ml-0">
-        <div className="projects md:mb-4 mb-1 mt-[25%] md:mt-[40%]">
-          PROJECTS
+    <div className="flex justify-center items-center h-screen">
+      <div className="">
+        <div className="projects">
+          Projects
         </div>
         <div className="md:text-2xl text-xl boldText">WEBSITES</div>
 

@@ -7,7 +7,7 @@
 }
 
 .impWInner {
-  @apply boldText text-[10vw] md:text-8xl hover:bg-[#e1cb9c] cursor-pointer
+  @apply boldText text-[10vw] md:text-8xl cursor-pointer ml-2 md:ml-4
 }
 
 .transitionAnim {
@@ -32,10 +32,6 @@
   .importantWordsStyle {
     font-size: 6px;
   }
-}
-
-.importantWordsStyle:hover {
-  background-color: yellow;
 }
 
 @font-face {
@@ -75,7 +71,7 @@ body {
 
 .title {
   font-family: regonia;
-  font-size: 60px;
+  font-size: 65px;
   letter-spacing: 5px;
 }
 
@@ -159,11 +155,6 @@ body {
 
 body:has(.requires-no-scroll) {
   overflow: hidden;
-}
-
-[hidden]{
-  display:none;
-  opacity: 0;
 }
 
 .flexbox{

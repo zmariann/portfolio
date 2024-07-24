@@ -5,14 +5,19 @@ export default function Coralized() {
   return (
     <div>
       <Horizontal
-        title="CORALIZED"
-        description="The jewelleries are designed and made by Henrietta Horváth.
-        This series was made during lockdown. I was sitting at home thinking about how can I represent these jewels.
-        All of the shops were closed, I couldn't buy any suitable set design for the shoot.
-        Somehow when I started to make sketches it come to my mind that one of my clients gave me an unusual present after a shooting, a bouquet which I had completely forgotten.
-        I found the flowers, they were dried.
-        I realized how intersting colors and shapes these plants have and I started to use them and create the compostions for each piece of jewel.
-        Finally, I chose a cheerful, vivid look which I hope can make these piece of handmade creations memorable."
+        title="Coralized"
+        description="Jewelleries are designed and made by Henrietta Horváth.
+        This series was created during the lockdowns.
+        Although I wasn't fully aware of it at the time,
+        looking back, that period was filled with a lot of creative work.
+        I was constantly photographing and painting.
+        I started to let go of the expectations I had taken on in various institutions.
+        I felt that I couldn't wait any longer, it was now or never, I had to bring out what I could from within myself.
+        That's how these pictures were born.
+        So I was sitting at home thinking about how I should portray these jewelry pieces.
+        I couldn't go out to buy props, I had to use the things I had at home for the photography.
+        Suddenly, I somehow noticed the bouquet I had received as a gift from one of my very kind clients after documenting an event.
+        I started to take apart the completely dried plants and used them to build the compositions."
         images={images}
         alt="coralized"
       />

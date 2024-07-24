@@ -7,7 +7,7 @@ export default function Photo() {
   const [photoPopup, setPhotoPopup] = useState(false);
 
   return (
-    <div className="impWOuter hidden transitionAnim">
+    <div className="impWOuter">
       <div className="impWInner" onClick={() => setPhotoPopup(true)}>
         PHOTOGRAPHY
       </div>

@@ -1,13 +1,13 @@
 "useClient";
-import React from "react";
 import { useState } from "react";
 import Popup from "../popup";
+
 
 export default function Multimedia() {
   const [multimediaPopup, setMultimediaPopup] = useState(false);
 
   return (
-    <div>
+    <div >
     <div className="impWOuter hidden transitionAnim">
       <div className="impWInner" onClick={() => setMultimediaPopup(true)}>
         MULTIMEDIA CONTENT

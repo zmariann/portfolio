@@ -1,5 +1,5 @@
-export const transitionAnim = () => {
-  const sections = document.querySelectorAll(".hidden");
+export const transitionAnim = (): void => {
+  const sections = document.querySelectorAll<HTMLElement>(".transitionAnim");
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -11,6 +11,7 @@ export const transitionAnim = () => {
     },
     { threshold: 0.1 }
   );
+
   sections.forEach((section) => {
     observer.observe(section);
   });
