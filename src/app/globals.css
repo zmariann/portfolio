@@ -2,53 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.impWOuter {
-  @apply leading-[10vw] flex flex-col
-}
-
-.impWInner {
-  @apply boldText text-[10vw] md:text-8xl cursor-pointer ml-2 md:ml-4
-}
-
 .transitionAnim {
-  @apply transition-opacity duration-[1300ms] opacity-0
-}
-
-.outerImpWordsStlye {
-  display: flex;
-  line-height: 10vw;
-  line-height: 6vh;
-  flex-direction: column;
-}
-
-.importantWordsStyle {
-  font-family: regradeBold;
-  font-size: 10vw;
-  font-size: 6vh;
-  cursor: pointer;
-}
-
-@media (min-width: 768px) {
-  .importantWordsStyle {
-    font-size: 6px;
-  }
-}
-
-@font-face {
-  font-family: regonia;
-  src: url("/regonia.otf");
+  @apply transition-opacity duration-[1300ms] opacity-0;
 }
 
 @font-face {
   font-family: regrade;
   src: url("/neue_regrade.ttf");
-  font-weight:500;
+  font-weight: 500;
 }
 
 @font-face {
   font-family: regradeBold;
   src: url("/neue_regrade.ttf");
-  font-weight:900;
+  font-weight: 900;
 }
 
 body {
@@ -59,40 +26,6 @@ body {
   font-family: regrade;
   font-size: 20px;
   color: #323232;
-}
-
-.display-linebreak {
-  white-space: pre-line;
-}
-
-.boldText {
-  font-family: regradeBold;
-}
-
-.title {
-  font-family: regonia;
-  font-size: 65px;
-  letter-spacing: 5px;
-}
-
-@media only screen and (max-width: 600px) {
-  .title {
-    font-family: regonia;
-    font-size: 9vw;
-    letter-spacing: 5px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .title {
-    font-family: regonia;
-    font-size: 12vw;
-    letter-spacing: 5px;
-  }
-}
-
-.mainPageIMG {
-  background-image: url(/weblap.jpg);
 }
 
 .about {
@@ -157,7 +90,7 @@ body:has(.requires-no-scroll) {
   overflow: hidden;
 }
 
-.flexbox{
+.flexbox {
   display: flex;
 }
 

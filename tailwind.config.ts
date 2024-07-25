@@ -8,10 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        regonia: ['regonia', 'sans-serif'],
+        regradeBold: ['regradeBold', 'sans-serif'],
+      },
+      letterSpacing: {
+        'wide-5': '5px',
+      },
       colors: {
         "mainBlack": "#323232",
         "background": "#f0f0f0"
       },
+    },
+    whiteSpace: {
+      'pre-line': 'pre-line',
     },
   },
   plugins: [],
