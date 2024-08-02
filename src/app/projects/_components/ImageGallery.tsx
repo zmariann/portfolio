@@ -1,19 +1,12 @@
 "use client";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import Description from "@/app/_components/importantWords/description";
 
 type ImageGalleryProps = {
-  title: string;
-  description: string;
   images: string[];
 };
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({
-  images,
-  title,
-  description,
-}) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -27,31 +20,23 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
   };
 
   const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'ArrowRight') {
+    if (event.key === "ArrowRight") {
       handleNext();
-    } else if (event.key === 'ArrowLeft') {
+    } else if (event.key === "ArrowLeft") {
       handlePrevious();
     }
   };
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   return (
-    <div className="flex justify-center items-center flex-col">
-      <div className="w-full md:w-[50%] mt-[0%] md:mt-[3%] pl-2 pr-2 md:pl-[0px] md:pr-[0px]">
-        <div className="horizontalGal mb-2 mt-[25%] md:mt-[10%]">{title}</div>
-        <div className="flex gap-2 m-3">
-          <Description text={description} title={title}></Description>
-          <Description text={description} title={title}></Description>
-        </div>
-      </div>
-
-      <div className="flex justify-center items-center mb-5">
+    <div>
+      <div className="flex justify-center items-center">
         <button
           className="m-3"
           onClick={handlePrevious}
@@ -61,7 +46,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
         </button>
 
         <img
-          className="w-[50%] h-auto"
+          className="w-[80%]"
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
         />

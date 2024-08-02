@@ -18,7 +18,7 @@ export default function About() {
         nothing. Whatever life brought the pieces of those events make up the
         whole that is now. That's how this website came into existence. {"\n"}
         Zamarka is a word assembled from my name under which I create my multimedia
-        works. I have been involved in photography for 10 years and for quite a
+        works. I have been involved in photography since 2013 and for quite a
         few years I have also been creating video content. In addition to this,
         I completed a programming bootcamp which among other things provided
         me with my frontend knowledge.

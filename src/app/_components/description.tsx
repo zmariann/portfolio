@@ -1,6 +1,7 @@
+"use client"
 import React from "react";
 import { useState } from "react";
-import Popup from "../popup";
+import Popup from "./popup";
 
 type Description = {
   title: string;
@@ -11,7 +12,7 @@ const Description: React.FC<Description> = ({ title, text }) => {
 
   return (
     <div className="impWOuter">
-      <button className="impWInner border-[2px] border-mainBlack p-2" onClick={() => setprojectStory(true)}>
+      <button className="impWInner" onClick={() => setprojectStory(true)}>
         Story of {title}
       </button>
       <Popup trigger={projectStory} setTrigger={setprojectStory}>

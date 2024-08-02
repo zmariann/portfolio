@@ -17,7 +17,7 @@ export default function Popup(props: Popup) {
         >
           <img className="" src="close.png" alt="menu" />
         </button>
-        <section className="pr-[5%] bg-slate-500">{props.children}</section>
+        <section className="bg-slate-500">{props.children}</section>
       </div>
     </div>
   ) : (
