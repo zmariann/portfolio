@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Description from "@/app/_components/importantWords/description";
 
@@ -25,6 +25,21 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === 'ArrowRight') {
+      handleNext();
+    } else if (event.key === 'ArrowLeft') {
+      handlePrevious();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   return (
     <div className="flex justify-center items-center flex-col">
