@@ -35,28 +35,37 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   }, []);
 
   return (
-    <div>
-      <div className="flex justify-center items-center">
-        <button
-          className="m-3"
-          onClick={handlePrevious}
-          disabled={images.length <= 1}
-        >
-          Prev
-        </button>
+    <div className="w-full bg-lime-700">
+      <div className="flex justify-center">
+        <div className="flex justify-center items-center w-[20%]">
+          <button
+            className="py-1 px-2"
+            onClick={handlePrevious}
+            disabled={images.length <= 1}
+          >
+            P
+          </button>
+        </div>
 
         <img
-          className="w-[80%]"
+          className="w-[60%]"
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
         />
-        <button
-          className="m-3"
-          onClick={handleNext}
-          disabled={images.length <= 1}
-        >
-          Next
-        </button>
+
+        <div className="flex justify-center items-center w-[20%]">
+          <button
+            className="py-1 px-2"
+            onClick={handleNext}
+            disabled={images.length <= 1}
+          >
+            N
+          </button>
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center m-2">
+        {currentIndex + 1} of {images.length}
       </div>
     </div>
   );

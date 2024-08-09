@@ -9,16 +9,12 @@ interface Popup {
 
 export default function Popup(props: Popup) {
   return props.trigger ? (
-    <div className="fixed top-0 left-0 w-full h-[100vh] bg-background flex justify-center items-center requires-no-scroll">
-      <div className="md:w-3/4 w-[95%] bg-slate-50 flex items-center flex-col">
-        <button
-          className="bg-red-400"
-          onClick={() => props.setTrigger(false)}
-        >
-          <img className="" src="close.png" alt="menu" />
+    <div className="fixed top-0 left-0 w-full h-screen flex justify-center items-center bg-teal-300 requires-no-scroll flex-col">
+        <button className="m-2 py-1 px-2 bg-orange-200" onClick={() => props.setTrigger(false)}>
+          X
         </button>
-        <section className="bg-slate-500">{props.children}</section>
-      </div>
+        <div className="flex justify-center items-center bg-slate-200">{props.children}</div>
+        
     </div>
   ) : (
     ""
