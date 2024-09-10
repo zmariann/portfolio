@@ -35,18 +35,16 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   }, []);
 
   return (
-    <div>
-      <div className="">
-        <div className="flex justify-center items-center flex-col">
-
-          <img
-            className="w-[90%]"
-            src={images[currentIndex]}
-            alt={`Image ${currentIndex + 1}`}
-          />
-
+    <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center relative w-[70%]">
+        <img
+          className=""
+          src={images[currentIndex]}
+          alt={`Image ${currentIndex + 1}`}
+        />
+        <div className="absolute w-full flex justify-between">
           <button
-            className=" w-1/2 bg-red-500 opacity-70"
+            className="w-1/2 bg-red-500 opacity-70"
             onClick={handlePrevious}
             disabled={images.length <= 1}
           >
@@ -54,17 +52,18 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
           </button>
 
           <button
-            className=" w-1/2 bg-green-600 opacity-70"
+            className="w-1/2 bg-green-600 opacity-70"
             onClick={handleNext}
             disabled={images.length <= 1}
           >
             next
           </button>
+          <div className="absolute flex justify-center w-full bg-blue-800 opacity-70">
+            <div className="text-xs">
+              {currentIndex + 1} / {images.length}
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="flex justify-center items-center m-3 text-xs">
-        {currentIndex + 1} / {images.length}
       </div>
     </div>
   );

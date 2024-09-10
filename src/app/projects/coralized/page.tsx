@@ -1,6 +1,6 @@
 import { title, description, images } from "./_components/coralizedDetails";
 import Description from "@/app/_components/description";
-import GalleryPopup from "@/app/_components/galleryPopUp";
+import GalleryPopup from "@/app/projects/_components/galleryPopUp";
 import Link from "next/link";
 
 export default function Coralized() {
