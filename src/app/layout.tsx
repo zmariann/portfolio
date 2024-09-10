@@ -7,11 +7,11 @@ import Footer from "./_components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MARIANN ZÁSZLÓS PORTFOLIO",
+  title: "ZAMARKA'S PORTFOLIO", 
   description:
-    "THIS IS A JUNIOR FULL-STACK DEVELOPER'S WEBSITE WHO'S OBSESSED WITH ART & TAKING PHOTOS",
+    "",
   keywords:
-    "TYPESCRIPT REACT NEXT.JS CSS TAILWIND EXPRESS.JS MYSQL GIT HTML NODE.JS PHOTOSHOP LIGTHROOM PREMIER",
+    "",
 };
 
 export default function RootLayout({
@@ -24,7 +24,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <NavBar />
         {children}
-        <Footer />
       </body>
     </html>
   );

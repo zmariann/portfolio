@@ -12,7 +12,12 @@ export default function GalleryPopup(props: GalleryPopupProps) {
 
   return (
     <div>
-      <button onClick={() => setGalleryPopup(true)}>Gallery</button>
+      <button
+        className="text-sm sm:text-base"
+        onClick={() => setGalleryPopup(true)}
+      >
+        Gallery
+      </button>
       <Popup trigger={galleryPopup} setTrigger={setGalleryPopup}>
         <ImageGallery images={props.images}></ImageGallery>
       </Popup>

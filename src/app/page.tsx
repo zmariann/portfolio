@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { transitionAnim } from "./_components/transitionAnimEffect";
 import IndexVideo from "./_components/indexVideo";
+import Footer from "./_components/footer";
 
 export default function Page() {
   useEffect(() => {
@@ -10,13 +11,20 @@ export default function Page() {
   }, []);
   return (
     <div>
-      <div className="transitionAnim flexbox justify-center items-center md:h-[90vh] sm:h-[90vh]">
+      <div className="transitionAnim flexbox sm:justify-center sm:items-center md:h-[90vh] sm:h-[90vh] ml-3 sm:ml-0">
         <div>
           <div className="leading-none font-regonia text-[15vw] sm:text-[6vw] tracking-wide-5 mt-14 sm:mt-0">
             Portfolio
           </div>
 
-          <div className="hidden sm:block max-sm whitespace-pre-line">
+          <div className="hidden xl:block max-sm whitespace-pre-line">
+            UNIQUE MULTIMEDIA PROJECTS CREATED BY ZAMARKA |{" "}
+            <Link className="underline" href="/about">
+              read more
+            </Link>
+          </div>
+
+          <div className="hidden sm:block xl:hidden max-sm whitespace-pre-line">
             UNIQUE MULTIMEDIA PROJECTS {"\n"}
             CREATED BY ZAMARKA |{" "}
             <Link className="underline" href="/about">
@@ -54,6 +62,7 @@ export default function Page() {
           <p className="text-xs sm:text-base">INFO@ZMARIANN.COM</p>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

@@ -28,28 +28,6 @@ body {
   color: #323232;
 }
 
-.about {
-  font-family: regonia;
-  font-size: 70px;
-  letter-spacing: 5px;
-}
-
-@media only screen and (max-width: 600px) {
-  .about {
-    font-family: regonia;
-    font-size: 15vw;
-    letter-spacing: 5px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .about {
-    font-family: regonia;
-    font-size: 20vw;
-    letter-spacing: 5px;
-  }
-}
-
 .projects {
   font-family: regonia;
   font-size: 70px;
@@ -96,4 +74,12 @@ body:has(.requires-no-scroll) {
 
 .visible {
   opacity: 1;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
